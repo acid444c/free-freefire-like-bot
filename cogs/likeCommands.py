@@ -15,7 +15,7 @@ CONFIG_FILE = "like_channels.json"
 class LikeCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.api_host = "https://free-fire-like1.p.rapidapi.com"
+        self.api_host = "https://lordlike.onrender.com/like?uid={uid}&region={region}"
         self.config_data = self.load_config()
         self.cooldowns = {}
         self.session = aiohttp.ClientSession()
@@ -142,7 +142,7 @@ class LikeCommands(commands.Cog):
                     else:
                         embed.description = "\n┌MAX LIKES\n└─This UID has already received the maximum likes today.\n"
 
-                    embed.set_footer(text="DEVELOPED BY THUG")
+                    embed.set_footer(text="DEVELOPED BY CYBER X!TER")
                     embed.description += "\n🔗 JOIN : https://discord.gg/awPm5B3QFg"
                     await ctx.send(embed=embed, mention_author=True, ephemeral=is_slash)
 
